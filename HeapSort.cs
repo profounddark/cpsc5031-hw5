@@ -118,9 +118,15 @@ class HeapSort
     public static void Main(string[] args)
     {
         // gotta test my heaps
-        int[] newHeap1 = { 40, 1, 2, 91, 43, 5, 6, 63, 8, 9, 28, 18, 12, 31, 14 };
+        int[] testHeap1 = { 5, 4, 3, 2 };
+        int[] testHeap2 = { 5, 4, 3, 2, 1 };
+        int[] testHeap3 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        int[] testHeap4 = { 6, 5, 5, 3, 2, 1 };
 
-        TestSort(newHeap1);
+        TestSort(testHeap1);
+        TestSort(testHeap2);
+        TestSort(testHeap3);
+        TestSort(testHeap4);
 
 
     }
