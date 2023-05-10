@@ -2,23 +2,6 @@
 
 class HeapSort
 {
-
-
-    /*
-        0
-        1               2
-        3       4       5       6
-        7   8   9   10  11  12  13  14
-
-    */
-
-    // assume all children are heapified, heapify
-    // the current node
-    // probably requires a sift down
-
-    // children are 2n+1 and 2n+2
-
-
     /// <summary>
     /// Swap two integer values (by reference!).
     /// </summary>
@@ -70,12 +53,18 @@ class HeapSort
     /// <param name="newHeap">the array to Heapify</param>
     public static void HeapifyMax(int[] newHeap)
     {
+        // the back half of the array are nodes w/ no children,
+        // so they can be skipped.
         for (int i = (newHeap.Length / 2); i >= 0; i--)
         {
             SiftDown(newHeap, i, newHeap.Length);
         }
     }
 
+    /// <summary>
+    /// Sort is the primary method of the HeapSort implementation.
+    /// </summary>
+    /// <param name="sortArray"></param>
     public static void Sort(int[] sortArray)
     {
         HeapifyMax(sortArray);
@@ -105,6 +94,11 @@ class HeapSort
         Console.WriteLine(" }");
     }
 
+    /// <summary>
+    /// TestSort displays the content of the array before sorting, sorts
+    /// the array, and displays the content of the array after sorting.
+    /// </summary>
+    /// <param name="testArray">the array to test the sort on</param>
     public static void TestSort(int[] testArray)
     {
         Console.WriteLine("Testing HeapSort on following array:");
@@ -121,12 +115,16 @@ class HeapSort
         int[] testHeap1 = { 5, 4, 3, 2 };
         int[] testHeap2 = { 5, 4, 3, 2, 1 };
         int[] testHeap3 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        int[] testHeap4 = { 6, 5, 5, 3, 2, 1 };
+        int[] testHeap4 = { 9, 3, 6, 3, 7, 3, 9, 3 };
+        int[] testHeap5 = { };
+        int[] testHeap6 = { 1 };
 
         TestSort(testHeap1);
         TestSort(testHeap2);
         TestSort(testHeap3);
         TestSort(testHeap4);
+        TestSort(testHeap5);
+        TestSort(testHeap6);
 
 
     }
