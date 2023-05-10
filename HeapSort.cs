@@ -109,6 +109,10 @@ class HeapSort
         PrintArray(testArray);
     }
 
+    public static void Spacer()
+    {
+        Console.WriteLine("\n* * * * * * * * * *\n");
+    }
     public static void Main(string[] args)
     {
         // gotta test my heaps
@@ -120,10 +124,15 @@ class HeapSort
         int[] testHeap6 = { 1 };
 
         TestSort(testHeap1);
+        Spacer();
         TestSort(testHeap2);
+        Spacer();
         TestSort(testHeap3);
+        Spacer();
         TestSort(testHeap4);
+        Spacer();
         TestSort(testHeap5);
+        Spacer();
         TestSort(testHeap6);
 
 
