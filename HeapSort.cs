@@ -109,6 +109,10 @@ class HeapSort
         PrintArray(testArray);
     }
 
+    /// <summary>
+    /// Spacer prints a divider with some whitespace. For formatting
+    /// purposes.
+    /// </summary>
     public static void Spacer()
     {
         Console.WriteLine("\n* * * * * * * * * *\n");
@@ -116,9 +120,9 @@ class HeapSort
     public static void Main(string[] args)
     {
         // gotta test my heaps
-        int[] testHeap1 = { 5, 4, 3, 2 };
+        int[] testHeap1 = { 1, 2, 3, 4, 5, 6 };
         int[] testHeap2 = { 5, 4, 3, 2, 1 };
-        int[] testHeap3 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        int[] testHeap3 = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
         int[] testHeap4 = { 9, 3, 6, 3, 7, 3, 9, 3 };
         int[] testHeap5 = { };
         int[] testHeap6 = { 1 };
